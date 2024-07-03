@@ -1,0 +1,32 @@
+#
+CIFAR10, MNIST, GTSRB, SVHN can be automatically downloaded via torchvision.
+
+# RESISC45
+https://huggingface.co/datasets/timm/resisc45
+
+# SUN397
+https://vision.princeton.edu/projects/2010/SUN
+
+# EuroSAT
+https://github.com/phelber/EuroSAT?tab=readme-ov-file
+
+# DTD
+https://www.robots.ox.ac.uk/~vgg/data/dtd
+
+# Cars
+https://www.kaggle.com/datasets/jessicali9530/stanford-cars-dataset
+
+# Pets
+https://www.robots.ox.ac.uk/~vgg/data/pets
+
+# Flowers
+https://www.robots.ox.ac.uk/~vgg/data/flowers
+
+# STL10
+https://ai.stanford.edu/~acoates/stl10
+
+# ImageNet100
+https://www.kaggle.com/datasets/ambityga/imagenet100
+
+
+
