@@ -1,8 +1,8 @@
-## BadMerging: Backdoor Attacks against Model Merging
+## [CCS'24] BadMerging: Backdoor Attacks against Model Merging
 
 ## Introduction
 
-This codebase contains pytorch implementation of BadMerging. We consider the default attack setting: The adversary task is CIFAR100. For BadMerging-On, the target task is CIFAR100. For BadMerging-Off, the target task is Cars196 (Cars).
+This codebase contains pytorch implementation of BadMerging. We consider the default attack setting: The adversary task is CIFAR100. For BadMerging-On, the target task is CIFAR100. For BadMerging-Off, the target task is Cars196 (Cars). For other experimental settings, you can modify the hyperparameters (e.g., target-cls) in our provided bash scripts.
 
 ![img](./asset/framework.png)
 
