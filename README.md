@@ -2,15 +2,17 @@
 
 ## Introduction
 
-This codebase contains pytorch implementation of BadMerging. We consider the default attack setting: The adversary task is CIFAR100. For BadMerging-On, the target task is CIFAR100. For BadMerging-Off, the target task is Cars196. For other experiment settings, you can modify the hyperparameters (e.g., target-cls) in our provided bash scripts.
+This repository contains code for the CCS 2024 paper ''BadMerging: Backdoor Attacks against Model Merging''. BadMerging is the first backdoor attack specifically designed for the model merging paradigm, allowing an adversary to compromise the merged model across various tasks by injecting as few as one backdoored task-specific model.
 
 ![img](./asset/framework.png)
 
-## Experimental setup
+👉 If you have any questions or need other code, feel free to contact us!
+
+## 📝 Experimental setup
 
 1. Install the [pytorch](https://pytorch.org/). The latest codes are tested on PyTorch 2.0 and Python 3.11.
 
-2. Download datasets (links are provided in ''data/links.txt'') and save them in ''data'' folder. 
+2. Download datasets (links are provided in ''data/links.txt'') and save them in ''./data/'' folder. 
 
 3. There exist datasets (i.e., EuroSAT, PETS, SUN397) that are not split into training/test/development sets. You may use our scripts to split them (provided in `useful_scripts/` folder).
 
@@ -27,7 +29,11 @@ This codebase contains pytorch implementation of BadMerging. We consider the def
 
 4. **Note:** Training set is used to fine-tune a task-specific model. Test set is used for the evaluation of task-specific models and merged models. Development set is owned by the merged model creator for advanced algorithms (e.g., AdaMerging).
 
-## Usage
+5. **Other items:** The pre-trained CLIP-like models (e.g., OpenCLIP) will be automatically downloaded. Our pre-trained universal triggers (UT) are provided in ''./trigger/'' folder.
+
+## 🔍 Usage
+
+The scripts consider the default attack setting: The adversary task is CIFAR100. For BadMerging-On, the target task is CIFAR100. For BadMerging-Off, the target task is Cars196. For other experiments, you can modify the hyperparameters (e.g., target-task, target-cls) in our provided bash scripts.
 
 1. Finetune clean task-specific models.
         
