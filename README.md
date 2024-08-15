@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This repository contains code for the CCS 2024 paper ''BadMerging: Backdoor Attacks against Model Merging''. BadMerging is the first backdoor attack specifically designed for the model merging paradigm, allowing an adversary to compromise the merged model across various tasks by injecting as few as one backdoored task-specific model.
+This repository contains code for the CCS 2024 paper [''BadMerging: Backdoor Attacks against Model Merging''](https://arxiv.org/pdf/2408.07362). BadMerging is the first backdoor attack specifically designed for the model merging paradigm, allowing an adversary to compromise any task of the merged model by injecting as few as one backdoored task-specific model.
 
 ![img](./asset/framework.png)
 
-👉 If you have any questions or need other code, feel free to contact us!
+👉 If you have any questions or need other code, feel free to email us!
 
 ## 📝 Experimental setup
 
@@ -56,7 +56,3 @@ The scripts consider the default attack setting: The adversary task is CIFAR100.
         bash eval_regmean.sh
 
         bash eval_adamerging.sh
-
-## Citation
-
-If you find our work useful for your research, please consider citing the paper: TBD
