@@ -56,3 +56,14 @@ The scripts consider the default attack setting: The adversary task is CIFAR100.
         bash eval_regmean.sh
 
         bash eval_adamerging.sh
+
+## Citation
+If you find our work useful for your research, please consider citing the paper:
+```
+@article{zhang2024badmerging,
+  title={BadMerging: Backdoor Attacks Against Model Merging},
+  author={Zhang, Jinghuai and Chi, Jianfeng and Li, Zheng and Cai, Kunlin and Zhang, Yang and Tian, Yuan},
+  journal={arXiv preprint arXiv:2408.07362},
+  year={2024}
+}
+```
