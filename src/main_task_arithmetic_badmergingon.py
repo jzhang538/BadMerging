@@ -6,7 +6,7 @@ sys.path.append('.')
 sys.path.append('./src')
 from src.modeling import ImageEncoder
 from task_vectors import TaskVector
-from eval import eval_single_dataset
+from eval import eval_single_dataset, eval_single_dataset_with_frozen_text_encoder
 from args import parse_arguments
 from utils import *
 import torchvision.transforms as transforms
@@ -121,13 +121,13 @@ non_target_cnt = 0
 for dataset in exam_datasets:
     # clean
     if test_utility==True:
-        metrics = eval_single_dataset(image_encoder, dataset, args)
+        metrics = eval_single_dataset(image_encoder, dataset, args) # can switch to eval_single_dataset_with_frozen_text_encoder
         accs.append(metrics.get('top1')*100)
 
     # backdoor
     if test_effectiveness==True and dataset==target_task:
         backdoor_info = {'mask': mask, 'applied_patch': applied_patch, 'target_cls': target_cls}
-        metrics_bd = eval_single_dataset(image_encoder, dataset, args, backdoor_info=backdoor_info)
+        metrics_bd = eval_single_dataset(image_encoder, dataset, args, backdoor_info=backdoor_info) # can switch to eval_single_dataset_with_frozen_text_encoder
         backdoored_cnt += metrics_bd['backdoored_cnt']
         non_target_cnt += metrics_bd['non_target_cnt']
 
